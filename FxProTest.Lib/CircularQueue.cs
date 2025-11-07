@@ -58,7 +58,7 @@ public class CircularQueue<T>
     public T Dequeue()
     {
         if(Count == 0) throw new InvalidOperationException();
-        var res = _storage[_read % _storage.Length];
+        var res = _storage[_read];
         IncrementReadPointer();
         
         return res;
